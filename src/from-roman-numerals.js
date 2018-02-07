@@ -1,13 +1,33 @@
 const convert = (romanNumeral) => {
     let number = 0;
+    const romanValueMap = {
+        I: 1,
+        V: 5,
+        X: 10,
+        L: 50,
+        C: 100,
+        D: 500,
+        M: 1000
+    };
 
-    const romans = ["M", "D", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"];
-    const numerals = [1000, 500, 100, 90, 50, 40, 10, 9, 5, 4, 1];
 
-    if(romanNumeral === "I") {
-        number += 1;
+    for(let i = 0; i < romanNumeral.length; i++) {
+        let current = romanValueMap[romanNumeral[i]];
+        let next = romanValueMap[romanNumeral[i + 1]];
+
+        if(current < next) {
+            number = (next - current);
+            i++;
+        };
+
+
+        if(romanNumeral[i] === "I") {
+            number = number + 1;
+        }
+
     }
     return number;
 };
+
 
 module.exports = convert;
