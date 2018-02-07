@@ -10,13 +10,12 @@ const convert = (romanNumeral) => {
         M: 1000
     };
 
-
     for(let i = 0; i < romanNumeral.length; i++) {
         let current = romanValueMap[romanNumeral[i]];
         let next = romanValueMap[romanNumeral[i + 1]];
 
         if(current < next) {
-            number = (next - current);
+            number += (next - current);
             i++;
         } else if(romanNumeral[i] === "I") {
             number += 1;
@@ -33,12 +32,8 @@ const convert = (romanNumeral) => {
         } else if(romanNumeral[i] === "M") {
             number += 1000;
         }
-
-
-
     }
     return number;
 };
-
 
 module.exports = convert;

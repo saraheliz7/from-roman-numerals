@@ -34,4 +34,12 @@ describe("Roman Numeral Converter", function() {
     it("should change M to 1000", function() {
         expect(convert("M")).to.equal(1000);
     });
+
+    it("should change MMC to 2100", function() {
+        expect(convert("MMC")).to.equal(2100);
+    });
+
+    it("should change MMMMMCCXLIII to 5243", function() {
+        expect(convert("MMMMMCCXLIII")).to.equal(5243);
+    });
 });
