@@ -10,4 +10,28 @@ describe("Roman Numeral Converter", function() {
     it("should change IV to 4", function() {
         expect(convert("IV")).to.equal(4);
     });
+
+    it("should change V to 5", function() {
+        expect(convert("V")).to.equal(5);
+    });
+
+    it("should change X to 10", function() {
+        expect(convert("X")).to.equal(10);
+    });
+
+    it("should change L to 50", function() {
+       expect(convert("L")).to.equal(50);
+    });
+
+    it("should change C to 100", function() {
+        expect(convert("C")).to.equal(100);
+    });
+
+    it("should change D to 500", function() {
+        expect(convert("D")).to.equal(500);
+    });
+
+    it("should change M to 1000", function() {
+        expect(convert("M")).to.equal(1000);
+    });
 });
