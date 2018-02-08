@@ -18,7 +18,7 @@ const convert = (romanNumeral) => {
             number += (next - current);
             i++;
         }  else {
-            number += romanValueMap[romanNumeral[i]];
+            number += current;
         }
     }
     return number;
