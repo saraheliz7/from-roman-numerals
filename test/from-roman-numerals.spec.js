@@ -20,7 +20,7 @@ describe("Roman Numeral Converter", function() {
     });
 
     it("should change L to 50", function() {
-       expect(convert("L")).to.equal(50);
+        expect(convert("L")).to.equal(50);
     });
 
     it("should change C to 100", function() {
